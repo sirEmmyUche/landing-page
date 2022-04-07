@@ -298,7 +298,7 @@ footer li{
 @media screen and (max-width: 600px){
 	
 	body{
-		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 
 	.nav-links{
