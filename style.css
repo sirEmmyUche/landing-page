@@ -247,9 +247,9 @@ footer li{
 	.img-gallery{
 		width: 100%;
 		display: grid;
-		grid-template-columns:repeat(auto-fill, minmax(350px, 1fr));
-		justify-items: center;
-		align-content: center;
+		grid-template-columns:1fr;
+		justify-content: center;
+		align-items: center;
 	}
 	img{
 		max-width: 100%;
