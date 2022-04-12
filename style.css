@@ -5,12 +5,10 @@
 }
 
 
-nav{	
-	overflow: hidden;
+nav{position: relative;	
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	min-height: 8vh;
 	font-family: 'poppins', sans-serif;
 }
 
@@ -306,39 +304,34 @@ footer li{
 		position: absolute;
 		right: 0px;
 		height: 92vh;
-		top: 8vh;
 		background:hsl(0, 0%, 0%);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		width: 50%;
-		transform: translateX(100%);
-		transition: transform 0.5s ease-in;
-	}
-
-	.nav-links li{
 		opacity: 0;
+		margin-left: 40%;
 	}
 
-	.burger{
+	
+.responsive {
+    position: absolute;
+    height: 50vh;
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40%;
+    width: 50%;
+    opacity: 100;  
+}
+
+
+.burger{
 		display: block;
-	}
 }
 
-.nav-active{
-	transform: translateX(0%);
-}
-
-@keyframes navLinkFade{
-	from{
-		opacity: 0;
-		transform: translateX(50px);
-	}
-	to{
-		opacity: 1;
-		transform: translateX(0px);
-	}
-} 
 
 .toggle .line1{
 	transform: rotate(-45deg) translate(-5px, 6px);
@@ -349,5 +342,6 @@ footer li{
 }
 
 .toggle .line3{
-	transform: rotate(45deg)translate(-5px, -6px);
+	transform: rotate(45deg) translate(-5px, -6px);
+}
 }
