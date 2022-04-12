@@ -305,7 +305,7 @@ footer li{
 		flex-direction: column;
 		justify-content: center;
 		margin-left: 40%;
-		width: 37%;
+		width: 100%;
 		opacity: 100;
 		z-index: 1;  
 	}
@@ -323,7 +323,7 @@ footer li{
 	}
 	
 	.logo{
-		z-index: 1;
+		z-index: 2;
 	}
 	
 	}
