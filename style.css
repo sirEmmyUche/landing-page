@@ -5,42 +5,30 @@
 }
 
 
-nav{position: relative;	
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	font-family: 'poppins', sans-serif;
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+	min-height: 8vh;
 }
 
-
-.nav-links{
-	display: flex;
-	justify-content: space-around;
-	width: 40%;
+a{
+    color: #fff;
+    text-decoration: none;
 }
 
-.nav-links li{
-	list-style: none;
+ul{
+    display: flex;
 }
 
-.nav-links a{
-	color: hsl(0, 0%, 100%);
-	text-decoration: none;
-	font-weight: bold;
-	font-size: 15px;
+ul li{
+    padding: 10px;
+    list-style: none;
 }
 
-.burger{
-	display: none;
-	cursor: pointer;
-}
-
-.burger div{
-	width: 25px;
-	height: 3px;
-	background:hsl(0, 0%, 100%);
-	margin: 5px;
-	transition: all 0.3s ease;
+#burger{
+    display: none;
 }
 
 
@@ -64,6 +52,7 @@ header{
 	font-size: 2vmax;
 	letter-spacing: 3px;
 	text-transform: uppercase;
+	z-index: -1;
 }
 
 main{
@@ -76,7 +65,7 @@ main{
 }
 
 section{
-	background:color: hsl(0, 0%, 100%);
+	background:hsl(0, 0%, 100%);
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	justify-content: center;
@@ -294,54 +283,47 @@ footer li{
 }
 
 
-@media screen and (max-width: 600px){
-	
-	body{
-		overflow-x: hidden;
-	}
-
+@media only screen and (max-width: 600px) {
+    
 	.nav-links{
 		position: absolute;
-		right: 0px;
-		height: 92vh;
-		background:hsl(0, 0%, 0%);
+		height: 50vh;
+		background-color: #444;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
-		width: 50%;
-		opacity: 0;
 		margin-left: 40%;
+		width: 50%;
+		opacity: 0;  
 	}
-
 	
-.responsive {
-    position: absolute;
-    height: 50vh;
-    background-color: #444;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 40%;
-    width: 50%;
-    opacity: 100;  
-}
-
-
-.burger{
+	.responsive {
+		position: absolute;
+		height: 50vh;
+		background-color:hsl(0, 0%, 0%);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 40%;
+		width: 37%;
+		opacity: 100;
+		z-index: 1;  
+	}
+	
+	#burger{
 		display: block;
-}
-
-
-.toggle .line1{
-	transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2{
-	opacity: 0;
-}
-
-.toggle .line3{
-	transform: rotate(45deg) translate(-5px, -6px);
-}
-}
+		z-index: 1;
+	}
+	
+	.close{
+		background-image: url('icon-close.svg');
+		background-repeat: no-repeat;
+		display: block;
+		z-index: 1;
+	}
+	
+	.logo{
+		z-index: 1;
+	}
+	
+	}
