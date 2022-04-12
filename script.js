@@ -7,10 +7,5 @@ const menuBar = () => {
              nav[i].classList.toggle('responsive');
         }
     })
-
 }
-
 menuBar()
-
-//burger.classList.toggle('toggle');
-
